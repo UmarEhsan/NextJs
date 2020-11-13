@@ -67,3 +67,32 @@ The public directory is also useful for robots.txt, Google Site Verification, an
 
 
 
+
+<h1>Important:</h1> 
+
+To use CSS Modules, the CSS file name must end with .module.css.
+
+
+<h1>Global Styles</h1>
+CSS Modules are useful for component-level styles. But if you want some CSS to be loaded by every page, Next.js has support for that as well.
+
+To load global CSS files, create a file called _app.js under pages and add the following content:
+
+
+This App component is the top-level component which will be common across all the different pages. You can use this App component to keep state when navigating between pages, for example.
+
+
+
+
+<h1>Adding Global CSS</h1>
+In Next.js, you can add global CSS files by importing them from pages/_app.js. You cannot import global CSS anywhere else.
+
+
+The reason that global CSS can't be imported outside of pages/_app.js is that global CSS affects all elements on the page.
+
+If you were to navigate from the homepage to the /posts/first-post page, global styles from the homepage would affect /posts/first-post unintentionally.
+
+You can place the global CSS file anywhere and use any name. So let’s do the following:
+
+Create a top-level styles directory and create global.css inside.
+Add the following content. It resets some styles and changes the color of the a tag.
