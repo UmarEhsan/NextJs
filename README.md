@@ -30,7 +30,7 @@ Using <Link>
 First, in pages/index.js, import the Link component from next/link by adding this line at the top:
 
 
-Code splitting and prefetching
+<h1>Code splitting and prefetching </h1>
 Next.js does code splitting automatically, so each page only loads what’s necessary for that page. That means when the homepage is rendered, the code for other pages is not served initially.
 
 This ensures that the homepage loads quickly even if you add hundreds of pages.
@@ -39,6 +39,31 @@ Only loading the code for the page you request also means that pages become isol
 
 Furthermore, in a production build of Next.js, whenever Link components appear in the browser’s viewport, Next.js automatically prefetches the code for the linked page in the background. By the time you click the link, the code for the destination page will already be loaded in the background, and the page transition will be near-instant!
 
+
+<h1>Assets, Metadata, and CSS</h1>
+
+In this lesson, you’ll learn:
+
+How to add static files (images, etc) to Next.js.
+How to customize what goes inside the <head> for each page.
+How to create a reusable React component which is styled using CSS Modules.
+How to add global CSS in pages/_app.js.
+Some useful tips for styling in Next.js.|
+
+
+
+<h1>Assets</h1>
+First, let’s talk about how Next.js handles static assets such as images.
+
+Next.js can serve static files, like images, under the top-level public directory. Files inside public can be referenced from the root of the application similar to pages.
+
+If you open pages/index.js in your application and take a look at the <footer>, we refer to the logo image like so:
+
+<img src="/vercel.svg" alt="Vercel Logo" className="logo" />
+
+the logo image exists inside the public directory at the top level of your application.
+
+The public directory is also useful for robots.txt, Google Site Verification, and any other static assets
 
 
 
