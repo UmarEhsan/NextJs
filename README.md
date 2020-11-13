@@ -19,3 +19,16 @@ Pages are associated with a route based on their file name. For example, in deve
 pages/index.js is associated with the / route.
 pages/posts/first-post.js is associated with the /posts/first-post route.
 We already have the pages/index.js file, so let’s create pages/posts/first-post.js to see how it works.
+
+
+Link Component
+When linking between pages on websites, you use the <a> HTML tag.
+
+In Next.js, you use the Link Component from next/link to wrap the <a> tag. <Link> allows you to do client-side navigation to a different page in the application.
+
+Using <Link>
+First, in pages/index.js, import the Link component from next/link by adding this line at the top:
+
+
+
+
