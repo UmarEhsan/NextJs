@@ -106,3 +106,18 @@ Before we talk about data fetching, let’s talk about one of the most important
 
 By default, Next.js pre-renders every page. This means that Next.js generates HTML for each page in advance, instead of having it all done by client-side JavaScript. Pre-rendering can result in better performance and SEO.
 
+
+
+<h1>Two Forms of Pre-rendering</h1>
+Next.js has two forms of pre-rendering: Static Generation and Server-side Rendering. The difference is in when it generates the HTML for a page.
+
+Static Generation is the pre-rendering method that generates the HTML at build time. The pre-rendered HTML is then reused on each request.
+Server-side Rendering is the pre-rendering method that generates the HTML on each request.
+
+
+
+<h1>Static Generation with Data using getStaticProps</h1>
+How does it work? Well, in Next.js, when you export a page component, you can also export an async function called getStaticProps. If you do this, then:
+
+getStaticProps runs at build time in production, and…
+Inside the function, you can fetch external data and send it as props to the page.
