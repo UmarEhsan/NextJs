@@ -96,3 +96,13 @@ You can place the global CSS file anywhere and use any name. So let’s do the f
 
 Create a top-level styles directory and create global.css inside.
 Add the following content. It resets some styles and changes the color of the a tag.
+
+
+
+
+
+<h1>Pre-rendering</h1>
+Before we talk about data fetching, let’s talk about one of the most important concepts in Next.js: Pre-rendering.
+
+By default, Next.js pre-renders every page. This means that Next.js generates HTML for each page in advance, instead of having it all done by client-side JavaScript. Pre-rendering can result in better performance and SEO.
+
