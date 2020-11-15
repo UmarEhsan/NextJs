@@ -121,3 +121,15 @@ How does it work? Well, in Next.js, when you export a page component, you can al
 
 getStaticProps runs at build time in production, and…
 Inside the function, you can fetch external data and send it as props to the page.
+
+
+
+
+
+ <b>getStaticProps</b> 
+ runs only on the server-side. It will never run on the client-side. It won’t even be included in the JS bundle for the browser. That means you can write code such as direct database queries without them being sent to browsers.
+
+Development vs. Production
+In development (npm run dev or yarn dev), getStaticProps runs on every request.
+In production, getStaticProps runs at build time.
+Because it’s meant to be run at build time, you won’t be able to use data that’s only available during request time, such as query parameters or HTTP headers.
